@@ -14,14 +14,14 @@ android {
     compileSdkVersion 29
     defaultConfig {
         if (buildAsApplication) {
-            applicationId "com.decomp.rsdkv3"
+            applicationId "com.sega.soniccd.decomp"
         }
         minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.3.3"
         if(project.hasProperty("RETRO_DISABLE_PLUS"))
-            autobuildFlag = true
+            autobuildFlag = false
         externalNativeBuild {
             cmake {
                 arguments "-DAPP_PLATFORM=android-16", "-DANDROID_STL=c++_static", "-DPLATFORM=Android", "-DRETRO_DISABLE_PLUS=$autobuildFlag"
